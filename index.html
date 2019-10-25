@@ -28,8 +28,31 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
     <div class="container">
-      <!-- Timeblocks go here -->
+    <!-- Timeblocks go here -->
+      <div class = "row">
+        <div class = "col-1">         
+            <p id="hour"></p>
+        </div>
+        <div class = "col-10 past"> <!--Replace "past" with default name -->
+            <textarea type="text" id = "agendaInput" name = "toDo" value="Enter Agenda Info Here"></textarea>
+        </div>
+        <div class = "col-1 saveBtn"> 
+            <buttton class = "btn"><span class="far fa-save"></span></buttton>   
+        </div>
+      </div> 
+      <div class = "row">
+          <div class = "col-1">         
+              <p id="hour"></p>
+          </div>
+          <div class = "col-10 past"> <!--Replace "past" with default name -->
+              <textarea type="text" id = "agendaInput" name = "toDo" value="Enter Agenda Info Here"></textarea>
+          </div>
+          <div class = "col-1 saveBtn"> 
+              <buttton class = "btn"><span class="far fa-save"></span></buttton>   
+          </div>
+        </div>   
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
