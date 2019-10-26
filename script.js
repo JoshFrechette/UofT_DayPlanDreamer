@@ -44,16 +44,15 @@ $(document).ready(function() {
 for (let i = 0 ; i < 9 ; i++){ // Have the save button store the appropriate user input to the proper key(timeblock)
     $('.row')[i].children[2].children[0].addEventListener('click', function(){//
         var userInputOrigin = $('.row')[i].children[1].children[0].value;
-        console.log(userInputOrigin)
-        var keyStorage = i + 9; // add to time if I need a refernce "UTC/GMT -5 hours"
-        console.log(agendaHour + " is the agenda row")
+        console.log(userInputOrigin + " is the userInptOrigin")
+        var keyStorage = i + 9; // add to time if I need a refernce "UTC/GMT -5 hours"       
         localStorage.setItem( keyStorage, userInputOrigin);//Store the user input into local storage
     })
 }
 
 function stored() {
     var storedTextInput = JSON.parse(localStorage.getItem( keyStorage, userInputOrigin));
-
+    console.log(storedTextInput + " is the storedTextInput")
     if (storedTextInput !== null) {
         textInput = storedTextInput;
     }
@@ -64,6 +63,7 @@ todoForm.addEventListener("click", function(event) {
     event.preventDefault();
   
     textInput = userTextInput.value.trim();
+    console.log("The textInput is " + textInput)
   
     // Return from function early if submitted todoText is blank
     if (textInput === "") {
