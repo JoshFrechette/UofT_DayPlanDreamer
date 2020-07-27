@@ -33,10 +33,7 @@ input{
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 5px solid white;;
-  
+  white-space: pre-wrap;  
 }
 
 .hour {
@@ -64,7 +61,7 @@ input{
   color:#ffffff;
 }
 .saveBtn {
-  border-left: 1px solid black;
+  border: solid #06AED5;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
@@ -74,4 +71,8 @@ input{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+.saveBtn, .textfield {
+  border-style: outset;
 }

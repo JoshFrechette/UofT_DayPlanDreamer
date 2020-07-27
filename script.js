@@ -9,8 +9,8 @@ console.log(date + " is today's date")
 
 //Display current date and hour in the jumbotron section
 document.getElementById("currentDay").innerHTML = date;
-var storedTextInput = JSON.parse(localStorage.getItem(keyStorage, userInputOrigin)) || [];
 
+var textInput = [];
 
 //An array if I want to make all time blocks DOMs later
 //var agendaHourly = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
@@ -35,7 +35,7 @@ function plannerLoad() {
     for (let i = 0; i < 9; i++) { // Have the save button store the appropriate user input to the proper key(timeblock)
         $('.row')[i].children[2].children[0].addEventListener('click', function () {//
             var userInputOrigin = $('.row')[i].children[1].children[0].value;
-            // console.log(userInputOrigin + " is the userInptOrigin")
+            console.log(userInputOrigin + " is the userInptOrigin")
             var keyStorage = i + 9; // add to time if I need a refernce "UTC/GMT -5 hours"       
             localStorage.setItem(keyStorage, userInputOrigin);//Store the user input into local storage
         })
@@ -43,8 +43,9 @@ function plannerLoad() {
 }
 
 function stored() {
-    // console.log(storedTextInput + " is the storedTextInput")
-    // console.log(textInput)
+    var storedTextInput = JSON.parse(localStorage.getItem(keyStorage, userInputOrigin));
+    console.log(storedTextInput + " is the storedTextInput")
+    console.log(textInput)
     if (storedTextInput !== null) {
         textInput = storedTextInput;
         console.log(textInput)
