@@ -4,8 +4,6 @@ body {
   line-height: 1;
 }
 
-
-
 input{
   background: transparent;
   border: none;
@@ -32,7 +30,7 @@ input{
   border-radius: 15px;
 }
 
-.row {
+.hourcell{
   white-space: pre-wrap;  
 }
 
@@ -59,6 +57,9 @@ input{
 
 .btn {
   color:#ffffff;
+}
+.saveIcon {
+  font-size: 2em;
 }
 .saveBtn {
   border: solid #06AED5;
